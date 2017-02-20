@@ -4,12 +4,12 @@
 #define dx 10
 #define dy 10
 
-GLfloat R=0.0,G=0.0,B=0.0,br=1,bg=1,bb=1;
+
 void display()
 {
 GLint i,j;
 glClear(GL_COLOR_BUFFER_BIT);
-glColor3f(R,G,B);
+glColor3f(0.0,1.0,0.0);
 for(i=10;i<300;i+=dx)
 for(j=10;j<300;j+=dy)
 {
@@ -27,11 +27,6 @@ glFlush();
 int main(int argc,char **argv)
 {
 
-printf("Enter R G B color values:\n");
-scanf("%f %f %f",&R,&G,&B);
-
-printf("Enter br,bg,bb color values\n");
-scanf("%f %f %f",&br,&bg,&bb);
 glutInit(&argc,argv);
 
 glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
@@ -42,7 +37,7 @@ glutInitWindowSize(700,400);
 
 glutCreateWindow("ATME");
 
-glClearColor(br,bg,bb,0.0);
+glClearColor(1.0,0.0,0.0,0.0);
 
 glMatrixMode(GL_PROJECTION);
 
